@@ -24,13 +24,13 @@ public class ScreenshotUtil {
     @Value("${screenshot.path}/img.png")
     private Path path;
 
-    @PostConstruct
-    private void init() throws InterruptedException {
-        for(int i=0;i<10;i++){
-            Thread.sleep(1000);
-            System.out.println("Sleeping ...");
-        }
-    }
+//    @PostConstruct
+//    private void init() throws InterruptedException {
+//        for(int i=0;i<10;i++){
+//            Thread.sleep(1000);
+//            System.out.println("Sleeping ...");
+//        }
+//    }
 
     public void takesScreenshot() throws IOException {
         File sourceFile= this.driver.getScreenshotAs(OutputType.FILE);

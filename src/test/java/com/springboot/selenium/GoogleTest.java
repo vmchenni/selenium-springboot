@@ -14,7 +14,7 @@ public class GoogleTest extends SpringBaseTestNGTest {
     @Autowired
     private GooglePage googlePage;
 
-    @Lazy
+
     @Autowired
     private ScreenshotUtil screenshotUtil;
 
