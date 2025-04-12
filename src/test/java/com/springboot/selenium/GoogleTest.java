@@ -3,6 +3,7 @@ package com.springboot.selenium;
 import com.springboot.selenium.page.google.GooglePage;
 import com.springboot.selenium.util.ScreenshotUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,7 @@ public class GoogleTest extends SpringBaseTestNGTest {
     @Autowired
     private GooglePage googlePage;
 
+    @Lazy
     @Autowired
     private ScreenshotUtil screenshotUtil;
 
@@ -24,6 +26,6 @@ public class GoogleTest extends SpringBaseTestNGTest {
         this.googlePage.getSearchComponent().search("StringBoot");
         Assert.assertTrue(this.googlePage.getSearchResult().isAt());
         Assert.assertTrue(this.googlePage.getSearchResult().getCount() > 2);
-        this.screenshotUtil.takesScreenshot();
+//        this.screenshotUtil.takesScreenshot();
     }
 }
